@@ -3,11 +3,12 @@ package dao
 import (
 	"log"
 
+	. "github.com/marcelocollyer/resume_go_app/model"
 	mgo "gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
 )
 
-type MoviesDAO struct {
+type ResumeDAO struct {
 	Server   string
 	Database string
 }
@@ -15,11 +16,11 @@ type MoviesDAO struct {
 var db *mgo.Database
 
 const (
-	COLLECTION = "movies"
+	COLLECTION = "resumes"
 )
 
 // Establish a connection to database
-func (m *MoviesDAO) Connect() {
+func (m *ResumeDAO) Connect() {
 	session, err := mgo.Dial(m.Server)
 	if err != nil {
 		log.Fatal(err)
@@ -27,34 +28,22 @@ func (m *MoviesDAO) Connect() {
 	db = session.DB(m.Database)
 }
 
-// Find list of movies
-func (m *MoviesDAO) FindAll() ([]Resume, error) {
-	var movies []Movie
-	err := db.C(COLLECTION).Find(bson.M{}).All(&movies)
-	return movies, err
+// Find list of resumes
+func (m *ResumeDAO) FindAll() ([]Resume, error) {
+	var resumes []Resume
+	err := db.C(COLLECTION).Find(bson.M{}).All(&resumes)
+	return resumes, err
 }
 
-// Find a movie by its id
-func (m *MoviesDAO) FindById(id string) (Movie, error) {
-	var movie Movie
-	err := db.C(COLLECTION).FindId(bson.ObjectIdHex(id)).One(&movie)
-	return movie, err
+// Find a resume by its id
+func (m *ResumeDAO) FindById(id string) (Resume, error) {
+	var resume Resume
+	err := db.C(COLLECTION).FindId(bson.ObjectIdHex(id)).One(&resume)
+	return resume, err
 }
 
 // Insert a movie into database
-func (m *MoviesDAO) Insert(movie Movie) error {
-	err := db.C(COLLECTION).Insert(&movie)
-	return err
-}
-
-// Delete an existing movie
-func (m *MoviesDAO) Delete(movie Movie) error {
-	err := db.C(COLLECTION).Remove(&movie)
-	return err
-}
-
-// Update an existing movie
-func (m *MoviesDAO) Update(movie Movie) error {
-	err := db.C(COLLECTION).UpdateId(movie.ID, &movie)
+func (m *ResumeDAO) Insert(resume Resume) error {
+	err := db.C(COLLECTION).Insert(&resume)
 	return err
 }
