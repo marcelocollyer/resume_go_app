@@ -23,6 +23,7 @@ func (m *ResumeController) InitEndPoints(router *mux.Router) {
 	router.HandleFunc("/resumes", CreateResume).Methods("POST")
 	router.HandleFunc("/resumes", UpdateResumeEndPoint).Methods("PUT")
 	router.HandleFunc("/resumes", DeleteResumeEndPoint).Methods("DELETE")
+	router.HandleFunc("/resumes/{id}", DeleteResumeByIDEndPoint).Methods("DELETE")
 	router.HandleFunc("/resumes/{id}", GetResume).Methods("GET")
 }
 
@@ -88,6 +89,18 @@ func DeleteResumeEndPoint(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	if err := dao.Delete(resume); err != nil {
+		RespondWithError(w, http.StatusInternalServerError, err.Error())
+		return
+	}
+	RespondWithJSON(w, http.StatusOK, map[string]string{"result": "success"})
+}
+
+// DeleteResumeEndPoint - Deletes a resume entry by given ID
+func DeleteResumeByIDEndPoint(w http.ResponseWriter, r *http.Request) {
+	defer r.Body.Close()
+	params := mux.Vars(r)
+
+	if err := dao.DeleteByID(params["id"]); err != nil {
 		RespondWithError(w, http.StatusInternalServerError, err.Error())
 		return
 	}

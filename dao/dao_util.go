@@ -12,7 +12,7 @@ type DAOUtil struct {
 	db       *mgo.Database
 }
 
-// Establish a connection to database
+// Connect - Establishes a connection to database TODO: adapt code to use this function instead
 func (m *DAOUtil) Connect() *mgo.Database {
 	session, err := mgo.Dial(m.Server)
 	if err != nil {
