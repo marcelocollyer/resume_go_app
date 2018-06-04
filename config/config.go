@@ -18,3 +18,7 @@ func (c *Config) Read() {
 		log.Fatal(err)
 	}
 }
+
+const (
+	COLLECTION = "resumes"
+)
