@@ -16,7 +16,7 @@ type Experience struct {
 
 // Resume struct (Model)
 type Resume struct {
-	ID          bson.ObjectId `json:"id"`
+	ID          bson.ObjectId `bson:"_id" json:"id"`
 	Name        string        `json:"name"`
 	CareerDesc  string        `json:"carrer_desc"`
 	RolesDesc   string        `json:"roles_desc"`

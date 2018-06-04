@@ -36,7 +36,7 @@ func (m *ResumeDAO) FindAll() ([]Resume, error) {
 }
 
 // Find a resume by its id
-func (m *ResumeDAO) FindById(id string) (Resume, error) {
+func (m *ResumeDAO) FindByID(id string) (Resume, error) {
 	var resume Resume
 	err := db.C(COLLECTION).FindId(bson.ObjectIdHex(id)).One(&resume)
 	return resume, err
@@ -45,5 +45,17 @@ func (m *ResumeDAO) FindById(id string) (Resume, error) {
 // Insert a resume into database
 func (m *ResumeDAO) Insert(resume Resume) error {
 	err := db.C(COLLECTION).Insert(&resume)
+	return err
+}
+
+// Update a resume into database
+func (m *ResumeDAO) Update(resume Resume) error {
+	err := db.C(COLLECTION).UpdateId(resume.ID, &resume)
+	return err
+}
+
+// Delete a resume from database
+func (m *ResumeDAO) Delete(resume Resume) error {
+	err := db.C(COLLECTION).Remove(&resume)
 	return err
 }

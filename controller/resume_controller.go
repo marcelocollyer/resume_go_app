@@ -16,14 +16,17 @@ type ResumeController struct {
 
 var dao = ResumeDAO{}
 
+// InitEndPoints initializes endpoints
 func (m *ResumeController) InitEndPoints(router *mux.Router) {
-	// Route handles & endpoints
+
 	router.HandleFunc("/resumes", GetResumes).Methods("GET")
-	router.HandleFunc("/resumes", createResume).Methods("POST")
-	router.HandleFunc("/resumes/{id}", getResume).Methods("GET")
+	router.HandleFunc("/resumes", CreateResume).Methods("POST")
+	router.HandleFunc("/resumes", UpdateResumeEndPoint).Methods("PUT")
+	router.HandleFunc("/resumes", DeleteResumeEndPoint).Methods("DELETE")
+	router.HandleFunc("/resumes/{id}", GetResume).Methods("GET")
 }
 
-// Get all resumes
+// GetResumes - get all resumes
 func GetResumes(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	resumes, err := dao.FindAll()
@@ -31,22 +34,22 @@ func GetResumes(w http.ResponseWriter, r *http.Request) {
 		RespondWithError(w, http.StatusInternalServerError, err.Error())
 		return
 	}
-	RespondWithJson(w, http.StatusOK, resumes)
+	RespondWithJSON(w, http.StatusOK, resumes)
 }
 
-// GET resume by id
-func getResume(w http.ResponseWriter, r *http.Request) {
+// GetResume - get resume by id
+func GetResume(w http.ResponseWriter, r *http.Request) {
 	params := mux.Vars(r)
-	resume, err := dao.FindById(params["id"])
+	resume, err := dao.FindByID(params["id"])
 	if err != nil {
 		RespondWithError(w, http.StatusBadRequest, "Invalid Resume ID")
 		return
 	}
-	RespondWithJson(w, http.StatusOK, resume)
+	RespondWithJSON(w, http.StatusOK, resume)
 }
 
-// POST a new resume
-func createResume(w http.ResponseWriter, r *http.Request) {
+// CreateResume - creates a new resume entry
+func CreateResume(w http.ResponseWriter, r *http.Request) {
 	defer r.Body.Close()
 	var resume Resume
 	if err := json.NewDecoder(r.Body).Decode(&resume); err != nil {
@@ -58,16 +61,48 @@ func createResume(w http.ResponseWriter, r *http.Request) {
 		RespondWithError(w, http.StatusInternalServerError, err.Error())
 		return
 	}
-	RespondWithJson(w, http.StatusCreated, resume)
+	RespondWithJSON(w, http.StatusCreated, resume)
 }
 
-func RespondWithJson(w http.ResponseWriter, code int, payload interface{}) {
+// UpdateResumeEndPoint - updates an existing resume entry
+func UpdateResumeEndPoint(w http.ResponseWriter, r *http.Request) {
+	defer r.Body.Close()
+	var resume Resume
+	if err := json.NewDecoder(r.Body).Decode(&resume); err != nil {
+		RespondWithError(w, http.StatusBadRequest, "Invalid request payload")
+		return
+	}
+	if err := dao.Update(resume); err != nil {
+		RespondWithError(w, http.StatusInternalServerError, err.Error())
+		return
+	}
+	RespondWithJSON(w, http.StatusOK, map[string]string{"result": "success"})
+}
+
+// DeleteResumeEndPoint - Deletes a resume entry
+func DeleteResumeEndPoint(w http.ResponseWriter, r *http.Request) {
+	defer r.Body.Close()
+	var resume Resume
+	if err := json.NewDecoder(r.Body).Decode(&resume); err != nil {
+		RespondWithError(w, http.StatusBadRequest, "Invalid request payload")
+		return
+	}
+	if err := dao.Delete(resume); err != nil {
+		RespondWithError(w, http.StatusInternalServerError, err.Error())
+		return
+	}
+	RespondWithJSON(w, http.StatusOK, map[string]string{"result": "success"})
+}
+
+// RespondWithJSON - writes JSON format response
+func RespondWithJSON(w http.ResponseWriter, code int, payload interface{}) {
 	response, _ := json.Marshal(payload)
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(code)
 	w.Write(response)
 }
 
+// RespondWithError - handles errors
 func RespondWithError(w http.ResponseWriter, code int, msg string) {
-	RespondWithJson(w, code, map[string]string{"error": msg})
+	RespondWithJSON(w, code, map[string]string{"error": msg})
 }
