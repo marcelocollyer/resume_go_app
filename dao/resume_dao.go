@@ -16,6 +16,7 @@ var db *mgo.Database
 
 // Parse the configuration file 'config.toml', and establish a connection to DB
 func init() {
+	//TODO move this code to dao_util
 
 	var config = Config{}
 	config.Read()

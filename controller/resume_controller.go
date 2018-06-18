@@ -32,7 +32,7 @@ func GetResumes(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	resumes, err := dao.FindAll()
 	if err != nil {
-		RespondWithError(w, http.StatusInternalServerError, err.Error())
+		RespondWithError(w, http.StatusBadRequest, "Error loading resumes")
 		return
 	}
 	RespondWithJSON(w, http.StatusOK, resumes)

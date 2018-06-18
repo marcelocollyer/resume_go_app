@@ -6,6 +6,7 @@ import (
 
 	"github.com/gorilla/mux"
 	. "github.com/marcelocollyer/resume_go_app/controller"
+	"github.com/gorilla/handlers"
 )
 
 var resumeController = ResumeController{}
@@ -19,8 +20,10 @@ func main() {
 
 	resumeController.InitEndPoints(r)
 
+	corsObj := handlers.AllowedOrigins([]string{"*"})
+
 	// Start server
-	if err := http.ListenAndServe(":8000", r); err != nil {
+	if err := http.ListenAndServe(":8000", handlers.CORS(corsObj)(r)); err != nil {
 		log.Fatal(err)
 	}
 }
