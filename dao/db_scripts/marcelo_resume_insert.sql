@@ -86,7 +86,7 @@
 	"skills": [{
 		"description": "Javascript",
 		"level": "90%",
-		"subset": [
+		"children": [
 			{
 			"description": "NodeJS",
 			"level": "70%"
@@ -128,7 +128,7 @@
 	{
 		"description": "Java",
 		"level": "95%",
-		"subset": [
+		"children": [
 			{
 			"description": "J2EE",
 			"level": "90%"

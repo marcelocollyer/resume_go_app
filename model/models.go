@@ -6,6 +6,26 @@ import (
 	"gopkg.in/mgo.v2/bson"
 )
 
+// Resume struct (Model)
+type Resume struct {
+	ID             bson.ObjectId `bson:"_id" json:"id"`
+	Name           string        `json:"name"`
+	ProfileImgURL  string        `json:"profile_img_url"`
+	Email          string        `json:"email"`
+	Phone          string        `json:"phone"`
+	Website        string        `json:"website"`
+	Linkedin       string        `json:"linkedin"`
+	Github         string        `json:"github"`
+	Twitter        string        `json:"twitter"`
+	RolesDesc      string        `json:"roles_desc"`
+	CarrerDesc     string        `json:"carrer_desc"`
+	ExperienceList []Experience  `json:"experiences"`
+	EducationList  []Education   `json:"educations"`
+	LanguageList   []Language    `json:"languages"`
+	InterestList   []Interest    `json:"interests"`
+	SkillList      []Skill       `json:"skills"`
+}
+
 // Experience struct model
 type Experience struct {
 	Title       string    `json:"title"`
@@ -31,31 +51,14 @@ type Language struct {
 	Level string `json:"level"`
 }
 
+// Interest struct model
 type Interest struct {
 	Description string `json:"description"`
 }
 
+// Skill struct model
 type Skill struct {
-	Description string `json:"description"`
-	Level       string `json:"level"`
-}
-
-// Resume struct (Model)
-type Resume struct {
-	ID             bson.ObjectId `bson:"_id" json:"id"`
-	Name           string        `json:"name"`
-	ProfileImgURL  string        `json:"profile_img_url"`
-	Email          string        `json:"email"`
-	Phone          string        `json:"phone"`
-	Website        string        `json:"website"`
-	Linkedin       string        `json:"linkedin"`
-	Github         string        `json:"github"`
-	Twitter        string        `json:"twitter"`
-	RolesDesc      string        `json:"roles_desc"`
-	CarrerDesc     string        `json:"carrer_desc"`
-	ExperienceList []Experience  `json:"experiences"`
-	EducationList  []Education   `json:"educations"`
-	LanguageList   []Language    `json:"languages"`
-	InterestList   []Interest    `json:"interests"`
-	SkillList      []Skill       `json:"skills"`
+	Description string  `json:"description"`
+	Level       string  `json:"level"`
+	Skill       []Skill `json:"children"`
 }
