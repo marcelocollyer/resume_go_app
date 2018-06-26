@@ -1,4 +1,6 @@
-var document = 
+
+
+
 {
 	"name": "Marcelo Collyer",
 	"carrer_desc": "+11 years Senior Full Stack Developer always aiming to learn new technologies to provide clients greatest solutions.",
@@ -82,50 +84,9 @@ var document =
 		"name": "Portuguese",
 		"level": "Native"
 	}],
-	"interests": null,
-	"skills": [{
-		"description": "Javascript",
-		"level": "90%",
-		"children": [
-			{
-			"description": "NodeJS",
-			"level": "70%"
-			},
-			{
-			"description": "ES6",
-			"level": "70%"
-			},
-			{
-			"description": "Typescript",
-			"level": "70%"
-			},
-			{
-			"description": "JQuery",
-			"level": "80%"
-			},
-			{
-			"description": "Ionic",
-			"level": "85%"
-			},
-			{
-			"description": "AngularJS",
-			"level": "90%"
-			},
-			{
-			"description": "Bootstrap",
-			"level": "80%"
-			},
-			{
-			"description": "Angular Material",
-			"level": "90%"
-			},
-			{
-			"description": "PrimeNG",
-			"level": "85%"
-			}			
-		]
-	},
-	{
+	"interests": [{"description": "7 String Guitar"}, {"description": "Bodyboarding"}],
+	"skills": [
+		{
 		"description": "Java",
 		"level": "95%",
 		"children": [
@@ -196,30 +157,214 @@ var document =
 		]
 	},
 	{
-		"description": "OSS Netflix",
-		"level": "60%"
+		"description": "OSS Netflix - Microservices",
+		"level": "60%",
+		"children": [
+			{
+			"description": "Zuul",
+			"level": "70%"
+			},
+			{
+			"description": "Eureka",
+			"level": "70%"
+			},
+			{
+			"description": "Hystrix",
+			"level": "70%"
+			},
+			{
+			"description": "Ribbon",
+			"level": "80%"
+			},
+			{
+			"description": "Feign",
+			"level": "85%"
+			}
+		]
+	},
+	{
+		"description": "Javascript",
+		"level": "90%",
+		"children": [
+			{
+			"description": "NodeJS",
+			"level": "70%"
+			},
+			{
+			"description": "ES6",
+			"level": "70%"
+			},
+			{
+			"description": "Typescript",
+			"level": "70%"
+			},
+			{
+			"description": "JQuery",
+			"level": "80%"
+			},
+			{
+			"description": "Ionic",
+			"level": "85%"
+			},
+			{
+			"description": "AngularJS",
+			"level": "90%"
+			},
+			{
+			"description": "Bootstrap",
+			"level": "80%"
+			},
+			{
+			"description": "Angular Material",
+			"level": "90%"
+			},
+			{
+			"description": "PrimeNG",
+			"level": "85%"
+			}			
+		]
 	},
 	{
 		"description": "Amazon Cloud",
-		"level": "70%"
+		"level": "70%",
+		"children": [
+			{
+			"description": "EC2",
+			"level": "70%"
+			},
+			{
+			"description": "SWF",
+			"level": "70%"
+			},
+			{
+			"description": "SQS",
+			"level": "70%"
+			},
+			{
+			"description": "S3",
+			"level": "80%"
+			},
+			{
+			"description": "RDS",
+			"level": "85%"
+			},
+			{
+			"description": "CloudWatch",
+			"level": "85%"
+			}
+		]
 	},
 	{
 		"description": ".NET",
-		"level": "70%"
+		"level": "80%",
+		"children"
+: 		[
+			{
+			"description": "C#",
+			"level": "80%"
+			},
+			{
+			"description": "ASP.NET MVC",
+			"level": "70%"
+			}
+		]
 	},
 	{
 		"description": "Golang",
-		"level": "20%"
+		"level": "20%",
+		"children":
+ 		[
+			{
+			"description": "Core Language",
+			"level": "20%"
+			},
+			{
+			"description": "Mux",
+			"level": "20%"
+			},
+			{
+			"description": "Mgo",
+			"level": "20%"
+			}
+		]
 	},
 	{
 		"description": "SQL & NoSQL",
-		"level": "80%"
+		"level": "80%",
+		"children": [
+			{
+			"description": "MySQL",
+			"level": "80%"
+			},
+			{
+			"description": "Microsoft SQL Server",
+			"level": "80%"
+			},
+			{
+			"description": "PostgreSQL",
+			"level": "80%"
+			},
+			{
+			"description": "MongoDB",
+			"level": "50%"
+			},
+			{
+			"description": "DynamoDB",
+			"level": "50%"
+			}
+		]
 	},
 	{
 		"description": "Devops",
-		"level": "40%"
+		"level": "30%",
+		"children": [
+			{
+			"description": "Docker",
+			"level": "50%"
+			},
+			{
+			"description": "Kubernetes",
+			"level": "30%"
+			},
+			{
+			"description": "EFK Stack",
+			"level": "60%"
+			},
+			{
+			"description": "Jenkins",
+			"level": "80%"
+			}
+		]
+	},
+	{
+		"description": "Others",
+		"level": "90%",
+		"children": [
+			{
+			"description": "Actionscript",
+			"level": "85%"
+			},
+			{
+			"description": "Android",
+			"level": "40%"
+			},
+			{
+			"description": "WebOS",
+			"level": "40%"
+			},
+			{
+			"description": "Mac",
+			"level": "80%"
+			},
+			{
+			"description": "Linux",
+			"level": "80%"
+			},
+			{
+			"description": "Windows",
+			"level": "90%"
+			}
+		]
 	}
 ]
 }
-;
-db.resumes.insert(document);
