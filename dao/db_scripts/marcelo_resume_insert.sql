@@ -8,7 +8,7 @@
 	"profile_img_url": "https://lh3.googleusercontent.com/airTSbTiNdKtfsw_T62NZoBAuEmMjD21WOdatNKHOOqX-epViWCd2ucXxwrlCQuL3_NtZCWl-zwhLw=s444-rw-no",
 	"email": "marcelocollyer@gmail.com",
 	"phone": "+55 85 98788-0949",
-	"website": "",
+	"website": "www.marcelocollyer.com",
 	"linkedin": "linkedin.com/in/marcelocollyer",
 	"github": "github.com/marcelocollyer",
 	"twitter": "twitter.com/marcelocollyer",
@@ -84,7 +84,20 @@
 		"name": "Portuguese",
 		"level": "Native"
 	}],
-	"interests": [{"description": "7 String Guitar"}, {"description": "Bodyboarding"}],
+	"certifications":[
+		{
+			"description": "Java Programmer", 
+			"company": "Oracle"
+		}, 
+		{
+			"description": "MTA Software Development Fundamentals", 
+			"company": "Microsoft"
+		}
+	],
+	"interests": [
+		{"description": "7 String Guitar"}, 
+		{"description": "Bodyboarding"}
+	],
 	"skills": [
 		{
 		"description": "Java",

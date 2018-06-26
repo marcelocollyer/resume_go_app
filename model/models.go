@@ -8,22 +8,23 @@ import (
 
 // Resume struct (Model)
 type Resume struct {
-	ID             bson.ObjectId `bson:"_id" json:"id"`
-	Name           string        `json:"name"`
-	ProfileImgURL  string        `json:"profile_img_url"`
-	Email          string        `json:"email"`
-	Phone          string        `json:"phone"`
-	Website        string        `json:"website"`
-	Linkedin       string        `json:"linkedin"`
-	Github         string        `json:"github"`
-	Twitter        string        `json:"twitter"`
-	RolesDesc      string        `json:"roles_desc"`
-	CarrerDesc     string        `json:"carrer_desc"`
-	ExperienceList []Experience  `json:"experiences"`
-	EducationList  []Education   `json:"educations"`
-	LanguageList   []Language    `json:"languages"`
-	InterestList   []Interest    `json:"interests"`
-	SkillList      []Skill       `json:"skills"`
+	ID                bson.ObjectId   `bson:"_id" json:"id"`
+	Name              string          `json:"name"`
+	ProfileImgURL     string          `json:"profile_img_url"`
+	Email             string          `json:"email"`
+	Phone             string          `json:"phone"`
+	Website           string          `json:"website"`
+	Linkedin          string          `json:"linkedin"`
+	Github            string          `json:"github"`
+	Twitter           string          `json:"twitter"`
+	RolesDesc         string          `json:"roles_desc"`
+	CarrerDesc        string          `json:"carrer_desc"`
+	ExperienceList    []Experience    `json:"experiences"`
+	EducationList     []Education     `json:"educations"`
+	LanguageList      []Language      `json:"languages"`
+	CertificationList []Certification `json:"certifications"`
+	InterestList      []Interest      `json:"interests"`
+	SkillList         []Skill         `json:"skills"`
 }
 
 // Experience struct model
@@ -49,6 +50,12 @@ type Education struct {
 type Language struct {
 	Name  string `json:"name"`
 	Level string `json:"level"`
+}
+
+// Interest struct model
+type Certification struct {
+	Description string `json:"description"`
+	Company     string `json:"company"`
 }
 
 // Interest struct model
