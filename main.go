@@ -4,9 +4,10 @@ import (
 	"log"
 	"net/http"
 
+	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 	. "github.com/marcelocollyer/resume_go_app/controller"
-	"github.com/gorilla/handlers"
+	_ "github.com/qodrorid/godaemon"
 )
 
 var resumeController = ResumeController{}
