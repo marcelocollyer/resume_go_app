@@ -1,4 +1,4 @@
-
+var document = 
 {
 	"name": "Marcelo Collyer",
 	"carrer_desc": "+11 years Senior Full Stack Developer always aiming to learn new technologies to provide clients greatest solutions.",
@@ -196,10 +196,6 @@
 		]
 	},
 	{
-		"description": "Golang",
-		"level": "20%"
-	},
-	{
 		"description": "OSS Netflix",
 		"level": "60%"
 	},
@@ -212,6 +208,10 @@
 		"level": "70%"
 	},
 	{
+		"description": "Golang",
+		"level": "20%"
+	},
+	{
 		"description": "SQL & NoSQL",
 		"level": "80%"
 	},
@@ -221,3 +221,5 @@
 	}
 ]
 }
+;
+db.resumes.insert(document);
