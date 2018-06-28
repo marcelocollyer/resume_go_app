@@ -13,6 +13,7 @@ type Resume struct {
 	ProfileImgURL     string          `json:"profile_img_url"`
 	Email             string          `json:"email"`
 	Phone             string          `json:"phone"`
+	Skype             string          `json:"skype"`
 	Website           string          `json:"website"`
 	Linkedin          string          `json:"linkedin"`
 	Github            string          `json:"github"`
@@ -52,7 +53,7 @@ type Language struct {
 	Level string `json:"level"`
 }
 
-// Interest struct model
+// Certification struct model
 type Certification struct {
 	Description string `json:"description"`
 	Company     string `json:"company"`

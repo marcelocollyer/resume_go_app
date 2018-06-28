@@ -1,13 +1,11 @@
-
-
-
 {
 	"name": "Marcelo Collyer",
 	"carrer_desc": "+11 years Senior Full Stack Developer always aiming to learn new technologies to provide clients greatest solutions.",
-	"roles_desc": "Software Architect, Technical Leader, Senior Full Stack Developer",
+	"roles_desc": "<p>Software Architect<p>Technical Leader<p>Senior Full Stack Developer",
 	"profile_img_url": "https://lh3.googleusercontent.com/airTSbTiNdKtfsw_T62NZoBAuEmMjD21WOdatNKHOOqX-epViWCd2ucXxwrlCQuL3_NtZCWl-zwhLw=s444-rw-no",
 	"email": "marcelocollyer@gmail.com",
 	"phone": "+55 85 98788-0949",
+	"skype": "marcelo_collyer",
 	"website": "www.marcelocollyer.com",
 	"linkedin": "linkedin.com/in/marcelocollyer",
 	"github": "github.com/marcelocollyer",
