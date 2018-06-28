@@ -13,7 +13,7 @@
 	"experiences": [{
 			"title": "SafeGuard World International",
 			"subtitle": "Software Architect | Technical Leader | Senior Full Stack Developer",
-			"description": "<b>Architect:</b> Provided a enterprise software architecture solution to satisfy client’s needs. Several documents have been created and reviewed periodically to be used as references for cross-cutting architectural aspects. </p><b>Technical Leader</b>: Responsible for leading Developer and QA teams spread across United States, Brazil, England and Sri Lanka. Facilitate a very fluid communication on the project was key to achieve a good balance on a cutting-edge software development with tied deadlines. </p><b>Full Stack Developer:</b> Implemented foundation for all microservices. Wrote most of the more complex features required by the client. Fixed a considerable amount of tickets to unblock implementation/testing of new features made by other developers.",
+			"description": "<b>Architect:</b> Provided a enterprise software architecture solution to satisfy client’s needs. Several documents have been created and reviewed periodically to be used as references for cross-cutting architectural aspects. </p><b>Technical Leader:</b> Responsible for leading Developer and QA teams spread across United States, Brazil, England and Sri Lanka. Facilitate a very fluid communication on the project was key to achieve a good balance on a cutting-edge software development with tied deadlines. </p><b>Full Stack Developer:</b> Implemented foundation for all microservices. Wrote most of the more complex features required by the client. Fixed a considerable amount of tickets to unblock implementation/testing of new features made by other developers.",
 			"location": "Brazil",
 			"start_date": "2017-09-02T00:00:00Z"
 		},
@@ -52,7 +52,7 @@
 		{
 			"title": "Instituto Atlântico",
 			"subtitle": "Full Stack Developer",
-			"description": "<p>Hewlett-Packard:​ Responsible for getting requirements from HP in Palo Alto, CA and guide development team to accomplishment of project goals. Development of successful integrated system using J2EE/C++. <p>Hewlett-Packard:​ Responsible for developing embedded mobile apps for Windows CE 6 using .NET Compact Framework and SQL Server Mobile Edition as well as migrating this software to Win32 platform. <p>Hewlett-Packard:​ Responsible for developing J2EE/Flex distributed solution taking advantage of the beginning of RFID technology. Technologies involved: JSF, Richfaces, PrimeFaces, Ice Faces, HTML5, jquery, Spring, Hibernate, Maven and Ant. <p>Sony Ericsson:​ Development of mobile chat app. J2ME MVC framework and communication middlewares were developed for Jabber, AIM and MSN protocols. <p>HSBC:​ Responsible for A&D and implementation of various financial products based on J2EE platform and Calypso framework. Technologies like Rational Software Modeler, MKS, IBM Quality Center, IBM Macro Runner and Sybase DB were used during this project",
+			"description": "<p><b>Hewlett-Packard:​</b> Responsible for getting requirements from HP in Palo Alto, CA and guide development team to accomplishment of project goals. Development of successful integrated system using J2EE/C++. <p><b>Hewlett-Packard:</b>​ Responsible for developing embedded mobile apps for Windows CE using .NET Compact Framework and SQL Server Mobile Edition as well as migrating this software to Win32 platform. <p><b>Hewlett-Packard:</b>​ Responsible for developing J2EE/Flex distributed solution taking advantage of the beginning of RFID technology. Technologies involved: JSF, Richfaces, PrimeFaces, Ice Faces, HTML5, jquery, Spring, Hibernate, Maven and Ant. <p><b>Sony Ericsson:​</b> Development of mobile chat app. J2ME MVC framework and communication middlewares were developed for Jabber, AIM and MSN protocols. <p><b>HSBC:​</b> Responsible for A&D and implementation of various financial products based on J2EE platform and Calypso framework. Technologies like Rational Software Modeler, MKS, IBM Quality Center, IBM Macro Runner and Sybase DB were used during this project.",
 			"location": "Brazil | United States",
 			"start_date": "2007-09-02T00:00:00Z",
 			"end_date": "2011-12-02T00:00:00Z"
@@ -60,7 +60,7 @@
 		{
 			"title": "Softsite Mobile",
 			"subtitle": "Full Stack Developer",
-			"description": "Development of sales force systems. Web and desktop systems were developed and integrated by using JAVA web-services. Main technologies applied: Google Web toolkit, Google Maps API, Spring, Hibernate, X-fire (CXF), Quartz, Ibatis, Jasper and SQL Server",
+			"description": "Development of sales force systems. Web and desktop systems were developed and integrated by using JAVA web-services. Main technologies applied: Google Web toolkit, Google Maps API, Spring, Hibernate, X-fire (CXF), Quartz, Ibatis, Jasper and SQL Server.",
 			"location": "Brazil",
 			"start_date": "2006-09-02T00:00:00Z",
 			"end_date": "2011-12-02T00:00:00Z"
